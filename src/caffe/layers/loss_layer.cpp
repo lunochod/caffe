@@ -29,5 +29,4 @@ void LossLayer<Dtype>::Reshape(
 }
 
 INSTANTIATE_CLASS(LossLayer);
-
 }  // namespace caffe

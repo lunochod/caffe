@@ -138,7 +138,7 @@ TYPED_TEST(InnerProductLayerTest, TestForward) {
 TYPED_TEST(InnerProductLayerTest, TestGradient) {
   typedef typename TypeParam::Dtype Dtype;
   bool IS_VALID_CUDA = false;
-#ifndef CPU_ONLY
+#ifdef USE_CUDA
   IS_VALID_CUDA = CAFFE_TEST_CUDA_PROP.major >= 2;
 #endif
 #ifdef USE_OPENCL

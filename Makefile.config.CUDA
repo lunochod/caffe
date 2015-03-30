@@ -5,7 +5,7 @@
 # USE_CUDNN := 1
 
 # CUDA directory contains bin/ and lib/ directories that we need.
-USE_CUDA := 1
+#USE_CUDA := 1
 CUDA_DIR := /usr/local/cuda
 # On Ubuntu 14.04, if cuda tools are installed via
 # "sudo apt-get install nvidia-cuda-toolkit" then use this instead:

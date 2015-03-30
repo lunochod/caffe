@@ -7,9 +7,9 @@ COMMON_FLAGS += -std=c++11
 DEBUG := 1
 
 # uncomment one
-CPU_ONLY := 1
+#CPU_ONLY := 1
 #USE_CUDA := 1
-#USE_OPENCL := 1
+USE_OPENCL := 1
 
 HOSTNAME := $(shell hostname)
 include Makefile.config.tools
@@ -336,7 +336,7 @@ ifeq ($(USE_OPENCL), 1)
 	TEST_OBJS := $(TEST_CXX_OBJS)
 	TEST_BINS := $(TEST_CXX_BINS)
 	ALL_WARNS := $(ALL_CXX_WARNS)
-	TEST_FILTER := --gtest_filter="*GPU*"
+#	TEST_FILTER := --gtest_filter="*GPU*"
 	COMMON_FLAGS += -DUSE_OPENCL
 	COMMON_FLAGS += -DCAFFE_OPENCL_VERSION="$(CAFFE_OPENCL_VERSION)"
 	

@@ -2,4 +2,4 @@
 # Contributions simplifying and improving our build system are welcome!
 
 # set CPU-only switch to build a version of caffe that runs on the CPU only
-CPU_ONLY := 1
+#CPU_ONLY := 1

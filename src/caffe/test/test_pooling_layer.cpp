@@ -1237,9 +1237,6 @@ TYPED_TEST(CuDNNPoolingLayerTest, TestSetupCuDNN) {
   EXPECT_EQ(this->blob_top_->width(), 2);
 }
 
-// This test and all following cuDNN pooling tests with padding are commented
-// for now, since cuDNN pooling does not currently support padding.
-/*
 TYPED_TEST(CuDNNPoolingLayerTest, TestSetupPaddedCuDNN) {
   Caffe::set_mode(Caffe::GPU);
   LayerParameter layer_param;
@@ -1255,7 +1252,6 @@ TYPED_TEST(CuDNNPoolingLayerTest, TestSetupPaddedCuDNN) {
   EXPECT_EQ(this->blob_top_->height(), 4);
   EXPECT_EQ(this->blob_top_->width(), 3);
 }
-*/
 
 /*
 TYPED_TEST(CuDNNPoolingLayerTest, PrintBackwardCuDNN) {
@@ -1323,7 +1319,6 @@ TYPED_TEST(CuDNNPoolingLayerTest, TestGradientMaxCuDNN) {
   }
 }
 
-/*
 TYPED_TEST(CuDNNPoolingLayerTest, TestForwardMaxPaddedCuDNN) {
   Caffe::set_mode(Caffe::GPU);
   LayerParameter layer_param;
@@ -1368,7 +1363,6 @@ TYPED_TEST(CuDNNPoolingLayerTest, TestForwardMaxPaddedCuDNN) {
   EXPECT_NEAR(this->blob_top_->cpu_data()[7], 4, epsilon);
   EXPECT_NEAR(this->blob_top_->cpu_data()[8], 1, epsilon);
 }
-*/
 
 /*
 TYPED_TEST(CuDNNPoolingLayerTest, TestGradientMaxTopMaskCuDNN) {
@@ -1436,7 +1430,6 @@ TYPED_TEST(CuDNNPoolingLayerTest, TestGradientAveCuDNN) {
   }
 }
 
-/*
 TYPED_TEST(CuDNNPoolingLayerTest, TestGradientAvePaddedCuDNN) {
   Caffe::set_mode(Caffe::GPU);
   for (int kernel_h = 3; kernel_h <= 4; kernel_h++) {
@@ -1455,7 +1448,6 @@ TYPED_TEST(CuDNNPoolingLayerTest, TestGradientAvePaddedCuDNN) {
     }
   }
 }
-*/
 
 #endif
 

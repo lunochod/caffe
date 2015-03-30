@@ -144,7 +144,7 @@ TYPED_TEST(MathFunctionsTest, TestCopyCPU) {
   }
 }
 
-#ifndef CPU_ONLY
+#ifdef USE_CUDA
 
 // TODO: Fix caffe_gpu_hamming_distance and re-enable this test.
 TYPED_TEST(MathFunctionsTest, DISABLED_TestHammingDistanceGPU) {
